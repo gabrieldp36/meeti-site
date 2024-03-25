@@ -1,0 +1,41 @@
+@use 'base/variables' as v ;
+@use 'base/mixins'  as m;
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    @include m.tablet {
+        flex-direction: row;
+    }
+
+    &__enlace {
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        transition-property: color;
+        transition-duration: .3s;
+
+        &:hover {
+            color: v.$primario;
+        }
+
+        &--crear {
+            font-weight: 700;
+            color: v.$primario;
+
+            /* Línea vertical que funciona de separador */
+            @include m.tablet {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    height: 4rem;
+                    border: 1px solid v.$grisClaro;
+                    margin: 0 0 0 2rem; // Compensamos el gap de 2rem
+                }
+            }
+        }
+    }
+}

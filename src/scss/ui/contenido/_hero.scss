@@ -1,0 +1,40 @@
+@use 'base/variables' as v ;
+@use 'base/mixins'  as m;
+
+/*******Background-Image Hero********/
+.notavif.notwebp .hero {
+    background-image: url('../assets/img/hero.jpg');
+}
+
+.webp .hero {
+    background-image: url('../assets/img/hero.webp');
+}
+
+.avif .hero {
+    background-image: url('../assets/img/hero.avif');
+}
+
+.hero {
+    min-height: 60rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: v.$blanco;
+
+    &__texto {
+        max-width: 60rem;
+        padding: 0 2rem;
+        @include m.tablet {
+            padding: 0;
+        }
+    }
+
+    &__enlace {
+        @include m.boton(v.$terciario, v.$blanco);
+    }
+}
