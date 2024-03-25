@@ -1,4 +1,4 @@
-
+![portada](https://github.com/gabrieldp36/meeti-site/assets/88417383/e7b20fc9-2586-466c-a100-6f28b6201505)
 
 # Meeti.
 
@@ -13,5 +13,5 @@ Se incorporó gestión de formatos de imágenes (avif, webp y jpg) en base a la 
 Para visitar la web pueden hacer click en el siguiente link:
 
 ```
-
+meeti-gdp.netlify.app
 ```
